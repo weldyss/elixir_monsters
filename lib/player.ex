@@ -1,4 +1,4 @@
-defmodule ElixirMonsters.Player do
+defmodule ExMon.Player do
   required_keys = [:life, :name, :move_avg, :move_heal, :move_rnd]
 
   @enforce_keys required_keys 
@@ -7,7 +7,7 @@ defmodule ElixirMonsters.Player do
   @max_life 100
 
   def build(name, move_rnd, move_avg, move_heal) do
-    %ElixirMonsters.Player{
+    %ExMon.Player{
       life: @max_life,
       name: name,
       move_rnd: move_rnd,
@@ -15,5 +15,5 @@ defmodule ElixirMonsters.Player do
       move_heal: move_heal
     }
   end
-end
 
+end
